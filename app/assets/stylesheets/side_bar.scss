@@ -1,0 +1,39 @@
+.side-bar {
+  float: left;
+  color: black;
+  width: 300px;
+  .header {
+    background-color: yellowgreen;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 20px;
+    font-size: 18px;
+    &__user-name {
+      float: left;
+    }
+    &__edit-user {
+      float: right;
+    } 
+  }
+
+  .items {
+    background-color: aqua;
+    color: white;
+    height: calc(100vh - 70px);
+    padding: 60px 20px 0 60px;
+    overflow: auto;
+    font-size: 18px;
+    .to-do {
+      padding-bottom: 20px;
+    }
+    .myblog {
+      padding-bottom: 20px;
+    }
+    .newsweek {
+      padding-bottom: 20px;
+    }
+  }
+  .items::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,13 @@
+.side-bar
+  .header
+    %h2.header__user-name 
+    //= %current_user.name
+    .header__edit-user
+    //= link_to "ユーザー情報編集", edit_user_path(current_user)
+  %ul.items
+    %li.to-do 
+      To-Do
+    %li.myblog
+      MyBlog
+    %li.newsweek
+      NewsWeek
