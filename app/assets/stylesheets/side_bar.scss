@@ -4,34 +4,66 @@
   width: 300px;
   .header {
     background-color: yellowgreen;
-    height: 70px;
-    line-height: 70px;
-    padding: 0 20px;
-    font-size: 18px;
-    &__user-name {
-      float: left;
+    height: 60px;
+    //line-height: 70px;
+    padding: 5px 20px;
+    font-size: 15px;
+    &__user {
+      //position: absolute;
+      
+      &__name {
+        float: left;
+        font-weight: bold;
+        //margin-right: 20px;
+        //font-size: 15px;
+      }
+      &__edit {
+        float: right;
+        //font-size: 15px;
+      }
     }
-    &__edit-user {
-      float: right;
-    } 
+    &__clock {
+      position: relative;
+      top: 15px;
+      #clock_date {
+        float: right;
+      }
+      #clock_time {
+        //margin-left: 10px;
+        float: right;
+      }
+    }
   }
 
   .items {
     background-color: aqua;
     color: white;
     height: calc(100vh - 70px);
-    padding: 60px 20px 0 60px;
+    //padding: 60px 20px 0 60px;
     overflow: auto;
     font-size: 18px;
     .to-do {
-      padding-bottom: 20px;
+      padding: 20px 0 0 60px;
+    }
+    .memo {
+      padding: 20px 0 0 60px;
     }
     .myblog {
-      padding-bottom: 20px;
+      padding: 20px 0 0 60px;
+    }
+    .chat-room {
+      padding: 20px 0 0 60px;
     }
     .newsweek {
-      padding-bottom: 20px;
+      padding: 20px 0 0 60px;
     }
+    .change-image {
+      padding: 20px 0 0 60px;
+    }
+    .back-to-top-page {
+      padding: 100px 0 0 60px;
+    }
+
   }
   .items::-webkit-scrollbar {
     display: none;

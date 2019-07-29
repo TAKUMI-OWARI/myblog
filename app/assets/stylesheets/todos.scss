@@ -1,0 +1,162 @@
+// Place all the styles related to the todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.todo_contents {
+  //margin: 0 auto;
+  //padding-left: 50px;
+  //padding-top: 30px;
+  position: relative;
+  width: calc(100vw - 300px);
+  height: calc(100vh - 90px);
+  float: right;
+  .todos {
+    position: relative;
+    //right: 40px;
+    padding: 40px;
+    height: calc(100vh - 170px);
+    overflow: auto;
+    .todo {
+      //float: left;
+      //font-size: 20px;
+      width: calc(100vw - 390px);
+      min-height: 26px;
+      padding: 0 5px 2.25px 5px;
+      margin-bottom: 5px;
+      border: dashed 0.5px #ee3229;
+      //height: 40px;
+      //line-height: 50px;
+      //padding: 40px;
+      &__check-btn {
+        float: left;
+        height: 52px;
+      }
+      &__text-content {
+        //float: left;
+        //width: 590px;
+        font-size: 26px;
+        line-height: 40px;
+        width: calc(100vw - 470px);
+        margin: 0 auto;
+
+      }
+      &__delete-btn {
+        float: right;
+        line-height: 40px;
+        width: 46px;
+      }
+
+    }
+  }
+  .todos::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Base for label styling */
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+  }
+
+  /* checkbox aspect */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 24px; height: 24px;
+    border: 2px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px #0000001a;
+  }
+  /* checked mark aspect */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    content: '\2713\0020';
+    position: absolute;
+    top: 0.025em; left: .22em;
+    font-size: 24px;
+    line-height: 24px;
+    color: #09ad7e;
+    transition: all .2s;
+    font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+  }
+  /* checked mark aspect changes */
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* disabled checkbox */
+  [type="checkbox"]:disabled:not(:checked) + label:before,
+  [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+  [type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+  }
+  [type="checkbox"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+  [type="checkbox"]:checked:focus + label:before,
+  [type="checkbox"]:not(:checked):focus + label:before {
+    border: 2px dotted blue;
+  }
+
+  /* hover style just for information */
+  label:hover:before {
+    border: 2px solid #4778d9!important;
+  }
+
+  .btn-text-3d {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ee3229;
+    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #a6231c, 0px 2px 0px #be2820, 0px 3px 0px #d62d24;
+  }
+  .btn-text-3d:active {
+    top: 4px;
+    text-shadow: none;
+  }
+
+  .active {
+    color: #CCCCCC;
+    border-color: #CCCCCC;
+  }
+}
+
+.post-form {
+  background-color: #DDDDDD;
+  width: calc(100vw - 380px);
+  float: right;
+  height: 50px;
+  padding: 20px 40px;
+  &__text-field {
+    padding: 0 10px;
+    height: 50px;
+    float: left;
+    width: calc(100% - 160px);
+    margin-right: 20px;
+  }
+  &__submit {
+    float: right;
+    height: 50px;
+    padding: 0 5px;
+    font-size: 20px;
+    border: none;
+  }
+}

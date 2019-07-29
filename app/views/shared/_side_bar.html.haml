@@ -1,13 +1,25 @@
 .side-bar
   .header
-    %h2.header__user-name 
-    //= %current_user.name
-    .header__edit-user
-    //= link_to "ユーザー情報編集", edit_user_path(current_user)
+    %ul.header__user
+      %li.header__user__name 
+        UserName: TAKUMI
+      %li.header__user__edit
+        = link_to "Edit user"
+    .header__clock
+      #clock_time
+      #clock_date
   %ul.items
     %li.to-do 
-      To-Do
+      = link_to "To-Do", todos_path
+    %li.memo
+      = link_to "Memo", memos_path, method: :get
     %li.myblog
-      MyBlog
+      = link_to "MyBlog", themes_path
+    %li.chat-room
+      = link_to "Chat-Room"
     %li.newsweek
-      NewsWeek
+      = link_to "NewsWeek", newsweeks_path
+    %li.change-image
+      = link_to "Change Image"
+    %li.back-to-top-page
+      = link_to "Back to top page", root_path

@@ -1,0 +1,7 @@
+.todo_contents
+  %ul.todos
+    = render partial: "todo", collection: @todos
+= form_for @todo, html: { class: 'post-form' } do |f| 
+  = f.text_field :content, class: 'post-form__text-field'
+  = f.submit class: 'post-form__submit'
+

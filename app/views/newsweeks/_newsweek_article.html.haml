@@ -1,0 +1,9 @@
+.article
+  = image_tag article.image, class: "article__image"
+  %ul.article__items
+    %li.category
+      = article.category
+    %li.title
+      = link_to article.title, article.url
+    %li.date
+      = article.date

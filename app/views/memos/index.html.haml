@@ -1,0 +1,8 @@
+.memo_contents
+  .memo_contents__header
+    .memo_contents__header__new-memo
+      = link_to fa_icon("pencil-square-o") + " New Memo"
+    .memo_contents__header__delete-all
+      = link_to fa_icon("trash") + " Delete Message"
+  .memos
+    = render partial: "memo"

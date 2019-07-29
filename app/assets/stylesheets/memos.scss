@@ -1,0 +1,94 @@
+// Place all the styles related to the memos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.memo_contents {
+  float: right;
+  width: calc(100vw - 300px);
+  height: 100vh;
+  //background-color: red;
+  &__header {
+    padding: 0 20px;
+    width: calc(100vw - 340px);
+    height: 70px;
+    line-height: 70px;
+    //background-color: yellow;
+    &__new-memo {
+      float: left;
+      margin-right: 30px;
+    }
+    &__delete-all {
+      float: left;
+    }
+  }
+  .memos {
+    position: absolute;
+    top: 70px;
+    padding-left: 40px;
+    width: calc(100vw - 340px);
+    height: calc(100% - 110px);
+    overflow: auto;
+    .memo {
+      float: left;
+      width: calc((100vw - 460px) / 3);
+      height: calc((100vw - 460px) / 3);
+      margin-right: 40px;
+      margin-bottom: 40px;
+      border-radius: 3px;
+      background-color: yellowgreen;
+      &__top {
+        width: calc((100vw - 460px) / 3);
+        height: calc(((100vw - 460px) / 3) * (3 / 4));
+        background-color: red;
+        border-radius: 3px 3px 0 0;
+      }
+      &__bottom {
+        width: calc((100vw - 460px) / 3);
+        height: calc((100vw - 460px) / 12);
+        background-color: blue;
+        border-radius: 0 0 3px 3px;
+        &__left {
+          float: left;
+          width: calc(((100vw - 460px) / 3) * (2 / 3));
+          height: calc((100vw - 460px) / 12);
+          //line-height: calc((100vw - 460px) / 12);
+          background-color: yellow;
+          border-radius: 0 0 0 3px;
+        }
+        &__right {
+          float: right;
+          width: calc(((100vw - 460px) / 9));
+          height: calc((100vw - 460px) / 12);
+          background-color: aqua;
+          &__date {
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            line-height: calc((100vw - 460px) / 24);
+          }
+          &__time {
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            line-height: calc((100vw - 460px) / 24);
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-sticky {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #f7f7f7;
+  border-left: solid 6px #ff7c5c;/*左線*/
+  color: #ff7c5c;/*文字色*/
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+}
+.btn-sticky:active {
+  box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+  transform: translateY(2px);
+}

@@ -1,0 +1,2 @@
+class Newsweek < ApplicationRecord
+end

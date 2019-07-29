@@ -1,0 +1,74 @@
+// Place all the styles related to the themes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.theme_contents {
+  float: right;
+  padding: 20px 0 20px 40px;
+  width: calc(100vw - 340px);
+  height: calc(100vh - 40px);
+  background-image: url("http://seesaa-blog-design.up.seesaa.net/image/SD_041_header.jpg");
+  background-size: cover;
+  .themes {
+    // display: flex;
+    // justify-content: space-around;
+    // justify-content: space-between;
+    position: absolute;
+    top: 70px;
+    //padding-top: 20px;
+    width: calc(100vw - 340px);
+    height: calc(100vh - 70px);
+    overflow: auto;
+    .theme {
+      float: left;
+      padding: 5px 10px;
+      width: calc((100vw - 520px) / 3);
+      height: calc((100vw - 490px) / 3);
+      margin-bottom: 40px;
+      margin-right: 40px;
+      background-image: url("https://www.sukesuke-mile-kojiki.net/wp-content/uploads/2018/01/20170111073606.png");
+      background-size: calc((100vw - 460px) / 3) calc((100vw - 460px) / 3);
+      border-radius: 3px;
+      .more {
+        &__list {
+          display: none;
+          text-decoration: none;
+          &__change-theme {
+            list-style: none;
+          }
+          &__delete {
+            list-style: none;
+          }
+        }
+      }
+      // &__name {
+      //   position: relative;
+      //   top: 220px;
+      //   font-size: 20px;
+      //   text-align: center;
+      // }
+    }
+  }
+}
+
+.new-theme {
+  .theme-form {
+
+    &__field {
+      margin-top: 20px;
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+      &--left {
+        float: left;
+        width: 30%;
+        //box-sizing: border-box;
+      }
+      &--right {
+        float: right;
+        width: 70%;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+%li.todo
+  %form{ action: "#" }
+    %input.todo__check-btn{ id: "#{todo.id}", type: "checkbox"}
+    %label.todo__text-content#text{ for: "#{todo.id}", id: "text" }
+      = todo.content
+    %button.todo__delete-btn.btn-text-3d
+      = link_to "削除", todo_path(todo.id), method: :delete
+      

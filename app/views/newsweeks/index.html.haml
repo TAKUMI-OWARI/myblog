@@ -1,0 +1,13 @@
+.newsweeks
+  .newsweeks__search-zone 
+    %input.newsweeks__search-zone__form#article-title-input{name: "keyword", placeholder: "記事名で検索", type:"text"}  
+    %button.newsweeks__search-zone__btn.btn-square-pop#article-category-change{name: "search", type: "submit"}
+      カテゴリー名で検索
+    %input.newsweeks__search-zone__form#article-category-input{name: "keyword", placeholder: "カテゴリー名で検索", type:"text"}  
+    %button.newsweeks__search-zone__btn.btn-square-pop#article-title-change{name: "search", type: "submit"}
+      記事名で検索
+  .newsweeks__articles
+    - @newsweeks.each do |newsweek|
+      = render partial: "newsweek_article", locals: { article: newsweek }
+  = paginate(@newsweeks)
+  
