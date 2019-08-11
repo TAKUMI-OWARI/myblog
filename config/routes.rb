@@ -17,6 +17,7 @@ Rails.application.routes.draw do
       get :search_title
       get :search_category
       get :test_1
+      get :test_2
     end
   end
 end
