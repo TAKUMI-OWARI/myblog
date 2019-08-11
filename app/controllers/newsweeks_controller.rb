@@ -23,4 +23,7 @@ class NewsweeksController < ApplicationController
       format.json
     end
   end
+
+  def test_1
+  end
 end
