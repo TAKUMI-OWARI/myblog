@@ -1,8 +1,7 @@
 .memo_contents
-  .memo_contents__header
-    .memo_contents__header__new-memo
-      = link_to fa_icon("pencil-square-o") + " New Memo"
-    .memo_contents__header__delete-all
-      = link_to fa_icon("trash") + " Delete Message"
+  %ul.memo_contents__header
+    %li= link_to fa_icon("pencil-square-o") + " New Memo", new_memo_path, class: "memo_contents__header__new-memo"
+    %li= link_to fa_icon("trash") + " Delete All Memos", all_destroy_memos_path, class: "memo_contents__header__delete-all"
   .memos
-    = render partial: "memo"
+    - @memos.each do |memo|
+      = render partial: "memo", locals: { memo: memo }

@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   root "messages#index"
   resources :users, only: [:index, :edit, :update]
   resources :todos, only: [:index, :create, :destroy]
-  resources :memos, only: [:index, :new, :create, :edit, :update]
+  resources :memos, only: [:index, :new, :create, :edit, :update, :destroy] do
+    collection do
+      get :all_destroy
+    end
+  end
   resources :themes, only: [:index, :new, :create, :edit, :update] do
     resources :posts, only: [:index, :create, :edit, :update]
   end

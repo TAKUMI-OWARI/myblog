@@ -1,23 +1,14 @@
-.memo
+.memo{data: {id: "#{memo.id}"}}
   .memo__top
-    ああああああああああああああああああああああああああああああああああああああああ
+    %p.memo__top__content
+      = memo.content
   .memo__bottom
     .memo__bottom__left
-      %a{href: "#", class: "btn-sticky"}
-        EDIT
-      %a{href: "#", class: "btn-sticky"}
-        DELETE
+      %ul.memo__bottom__left__btns
+        %li= link_to "EDIT", edit_memo_path(memo.id), class: "memo__bottom__left__btns__edit-btn btn-sticky"
+        %li= link_to "DELETE", memo_path(memo.id), method: :delete, class: "memo__bottom__left__btns__delete-btn btn-sticky"
     %ul.memo__bottom__right
       %li.memo__bottom__right__date
-        2019/07/27
+        = memo.created_at.strftime("%Y/%m/%d")
       %li.memo__bottom__right__time
-        18:24
-.memo
-.memo
-.memo
-.memo
-.memo
-.memo
-.memo
-.memo
-.memo
+        = memo.created_at.strftime("%H:%M")

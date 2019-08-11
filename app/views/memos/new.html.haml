@@ -1,0 +1,4 @@
+= form_for(@memo, url: "/memos", method: :post, html: {class: 'memo-form'}) do |f|
+  = f.text_area :content, class: "memo-form__text_area"
+  = f.submit "Update", class: "memo-form__submit-btn"
+  = link_to 'Back', memos_path, class: "memo-form-back"
